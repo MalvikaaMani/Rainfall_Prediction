@@ -4,10 +4,10 @@ This project develops a machine learning model to predict daily rainfall based o
   Project Overview
 </h1>
 The primary goal of this project is to build an effective rain prediction system. By analyzing various meteorological parameters recorded throughout the day, the model learns patterns associated with rainfall events. The output is a binary classification: whether it will rain on a given day (1) or not (0).
-<h2>Dataset Description</h2>
+<h1>Dataset Description</h1>
 The model is trained on historical weather observations provided in testset.csv. The columns of the dataset has been added in this repository under dataset_columns.png file.
 
-<h3> Features</h3>
+<h1> Features</h1>
 The raw sub-daily data is transformed into a daily aggregated dataset, which forms the basis for model training.
 <br>
 Derived Features
@@ -29,7 +29,7 @@ For each day, the following aggregate features are created from the raw data:
   <li>rain_daily: A binary flag (1 or 0) indicating whether it rained at all on that specific day, derived from the maximum of _rain observations for the day.</li>
 </ul>
 Missing values are handled using median imputation for numerical features and mode imputation for categorical/binary features before aggregation. A final imputation step ensures no NaNs remain in the feature set X.
-<h3>Technologies Used</h3>
+<h1>Technologies Used</h1>
 <ul>
   <li>Python 3.x</li>
   <li>pandas: For data manipulation and analysis.</li>
@@ -39,11 +39,12 @@ Missing values are handled using median imputation for numerical features and mo
   <li>NumPy: For numerical operations.</li>
   <li>SciPy: For statistical functions used in hyperparameter distributions (randint).</li>
 </ul>
-<h3> Results</h3>
+<h1> Results</h1>
 The model's performance metrics on the test set, after hyperparameter tuning and handling class imbalance, are presented below:
 <ul>
   <li> Best cross validation accuracy for Random Forest: 0.9003</li>
   <li> Test Accuracy: 0.9101</li>
   <li> AUC Score: 0.9305</li>
+  The pictures of Confusion Matrix and ROC Curve for the model has been added in the results folder.
 </ul>
 
