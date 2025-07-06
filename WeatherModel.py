@@ -13,6 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
 from scipy.stats import randint
+import joblib
 
 # Load the dataset
 df = pd.read_csv('testset.csv')
@@ -169,3 +170,6 @@ print(f"\nAUC Score for Random Forest: {auc_score:.4f}")
 print("\n--- Final Result Summary ---")
 print(f"\nRandom Forest Model achieved a Test Accuracy: {accuracy_rf:.4f}")
 print(f"AUC Score: {auc_score:.4f}")
+
+joblib.dump(best_rf_model, "rainfall_model.pkl")
+print("✅ rainfall_model.pkl saved successfully.")
