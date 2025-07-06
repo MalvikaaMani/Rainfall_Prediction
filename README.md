@@ -1,12 +1,15 @@
 # Rainfall_Prediction
 This project develops a machine learning model to predict daily rainfall based on historical weather data. It leverages a Random Forest Classifier with robust data preprocessing, feature engineering, and hyperparameter tuning to achieve accurate predictions, addressing common challenges like class imbalance.
+<h2> Live Demo </h2>
+[Try it on Streamlit] (https://rainfallprediction-7ftrwdjc4dnnxtncx6w6lw.streamlit.app/)
 <h1>
   Project Overview
 </h1>
 The primary goal of this project is to build an effective rain prediction system. By analyzing various meteorological parameters recorded throughout the day, the model learns patterns associated with rainfall events. The output is a binary classification: whether it will rain on a given day (1) or not (0).
 <h1>Dataset Description</h1>
 The model is trained on historical weather observations provided in testset.csv. The columns of the dataset has been added in this repository under dataset_columns.png file.
-
+<br>
+[Download the Dataset] (https://www.kaggle.com/mahirkukreja/delhi-weatherdata/home)
 <h1> Features</h1>
 The raw sub-daily data is transformed into a daily aggregated dataset, which forms the basis for model training.
 <br>
@@ -39,6 +42,8 @@ Missing values are handled using median imputation for numerical features and mo
   <li>NumPy: For numerical operations.</li>
   <li>SciPy: For statistical functions used in hyperparameter distributions (randint).</li>
 </ul>
+<h1> Deployment </h1>
+For deployment a simpler model was chosen which consisted only 6 features out of 37 original features for the sake of simplicity. The simpler was retrained and saved as rainfall_simple_model.pkl. Deployment on Streamlit was carried out on this model. 
 <h1> Results</h1>
 The model's performance metrics on the test set, after hyperparameter tuning and handling class imbalance, are presented below:
 <ul>
