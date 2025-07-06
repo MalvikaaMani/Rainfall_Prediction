@@ -1,6 +1,6 @@
-pandas
+streamlit
 scikit-learn
-matplotlib
+pandas
 numpy
-imbalanced-learn
-scipy
+imblearn
+joblib
